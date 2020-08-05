@@ -6,4 +6,7 @@ const server = http.createServer((request, response) => { // 每一条请求都�
 })
 
 // 监听端口，不然无法与客户端通信
-server.listen(8080, 'localhost')
+const hostname = 'localhost'
+const port = 8080
+server.listen(port, hostname)
+console.log(`Server is alive at: http://${hostname}:${port}`)
