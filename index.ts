@@ -1,3 +1,3 @@
-import { boot } from './boot/server'
+import { boot } from './boot/server';
 
-boot()
+boot();
