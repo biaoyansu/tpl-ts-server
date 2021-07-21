@@ -1,5 +1,6 @@
 import { app_config } from '../config/app';
 import { parse_request, parse_route } from '../net/request';
+import { create_connection } from './database';
 
 const http = require('http');
 
@@ -7,6 +8,9 @@ const http = require('http');
  * 创建 Server
  */
 export async function create_server() {
+  // 连接数据库
+  await create_connection();
+
   // 创建一个 server 对象
   const server = http.createServer(async (request, response) => { // 每一条请求都会调用这个函数
     parse_request(request);

@@ -1,5 +1,5 @@
 export const route = {
-  '/': 'Home',
+  '/': 'Yo',
   '/fn-string': (req, res) => parseFloat(req.$query.a) + parseFloat(req.$query.b) + '',
   '/fn-object': () => { return { a: 1, b: 2 };},
   '/string': 'This is a test page.',
